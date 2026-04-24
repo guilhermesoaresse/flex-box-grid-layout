@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5: Flexbox & Grid Masterclass</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Layout Masterclass 🚀</h1>
+            <p>Domine Flexbox e Grid de forma visual e interativa.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- New Theoretical Intro Section -->
+        <section class="intro-concepts">
+            <div class="intro-card flex-intro">
+                <div class="intro-header">
+                    <span class="icon">↔️</span>
+                    <h3>Flexbox: Unidimensional</h3>
+                </div>
+                <div class="intro-body">
+                    <p>O Flexbox trabalha com <strong>uma dimensão</strong> de cada vez (linha ou coluna). É perfeito para alinhar itens em um único eixo e criar distribuições flexíveis.</p>
+                    <div class="details">
+                        <ul>
+                            <li><strong>Distribuição:</strong> Itens expandem ou contraem dinamicamente.</li>
+                            <li><strong>Ordem:</strong> Mude a ordem visual sem mexer no HTML.</li>
+                            <li><strong>Alinhamento:</strong> Controle total nos eixos Main e Cross.</li>
+                        </ul>
+                        <p class="usage">Use para: Menus, barras de ferramentas e layouts lineares.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-card grid-intro">
+                <div class="intro-header">
+                    <span class="icon">⊞</span>
+                    <h3>CSS Grid: Bidimensional</h3>
+                </div>
+                <div class="intro-body">
+                    <p>O Grid trabalha com <strong>duas dimensões</strong> simultaneamente (linhas e colunas). Ideal para estruturas complexas e precisas.</p>
+                    <div class="details">
+                        <ul>
+                            <li><strong>Posicionamento:</strong> Coloque itens em qualquer célula da grade.</li>
+                            <li><strong>Espaçamento:</strong> Distribuição automática de espaço entre células.</li>
+                            <li><strong>Sobreposição:</strong> Elementos podem se sobrepor facilmente.</li>
+                        </ul>
+                        <p class="usage">Use para: Dashboards, layouts de páginas inteiras e galerias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="resumo-box card">
+            <p>🚀 <strong>Resumindo:</strong> Use Flexbox para alinhar itens em uma direção e Grid para layouts complexos em duas dimensões. Na prática, você vai <strong>combinar ambos</strong> para criar interfaces sofisticadas!</p>
+        </div>
+
+        <!-- Showcase Section -->
+        <section class="showcase-section">
+            <h2 class="section-title">Showcase: Componentes de Interface</h2>
+            <p class="section-subtitle">Exemplos reais que você pode construir usando essas técnicas.</p>
+
+            <div class="showcase-grid">
+                <!-- Example 1: Glass Menu -->
+                <div class="showcase-card">
+                    <div class="showcase-preview">
+                        <nav class="glass-nav">
+                            <div class="logo">META</div>
+                            <ul class="nav-links-show">
+                                <li>Home</li>
+                                <li>Products</li>
+                                <li>Contact</li>
+                            </ul>
+                            <div class="glow-btn">Join Now</div>
+                        </nav>
+                    </div>
+                    <div class="showcase-info">
+                        <h4>Navbar Glassmorphism</h4>
+                        <p>Flexbox para distribuição perfeita com efeito de vidro.</p>
+                        <button class="view-code-btn" data-target="code-glass-nav">Ver Código</button>
+                    </div>
+                    <div id="code-glass-nav" class="hidden-code">
+                        <pre><code>/* CSS */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Example 2: Bento Grid -->
+                <div class="showcase-card">
+                    <div class="showcase-preview">
+                        <div class="bento-grid">
+                            <div class="bento-item b1">Main</div>
+                            <div class="bento-item b2">Stats</div>
+                            <div class="bento-item b3">Info</div>
+                            <div class="bento-item b4">Chart</div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h4>Bento Grid Dashboard</h4>
+                        <p>Layouts assimétricos e modernos usando CSS Grid.</p>
+                        <button class="view-code-btn" data-target="code-bento">Ver Código</button>
+                    </div>
+                    <div id="code-bento" class="hidden-code">
+                        <pre><code>/* CSS Grid Areas */
+.grid {
+  display: grid;
+  grid-template-areas: 
+    "main main stats"
+    "main main info"
+    "chart chart chart";
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Example 3: Sidebar Pro -->
+                <div class="showcase-card">
+                    <div class="showcase-preview">
+                        <div class="sidebar-mock">
+                            <div class="side-top">🚀</div>
+                            <div class="side-mid">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="side-bot">⚙️</div>
+                        </div>
+                        <div class="content-mock">
+                            <div class="card-mock glow">Card 1</div>
+                            <div class="card-mock">Card 2</div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h4>Admin Panel Sidebar</h4>
+                        <p>Combinação de Sidebar vertical e Grid de conteúdo.</p>
+                        <button class="view-code-btn" data-target="code-sidebar">Ver Código</button>
+                    </div>
+                    <div id="code-sidebar" class="hidden-code">
+                        <pre><code>/* Hybrid Layout */
+.container {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+}
+.sidebar { display: flex; flex-direction: column; }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Flexbox Section -->
+        <section id="flexbox" class="card">
+            <div class="card-header">
+                <h2>1. Flexbox (O Eixo Unidimensional)</h2>
+                <p>Ideal para alinhar elementos em uma linha ou coluna.</p>
+            </div>
+            
+            <div class="interactive-grid">
+                <div class="controls">
+                    <div class="control-group">
+                        <label>display</label>
+                        <select data-prop="display" class="flex-control">
+                            <option value="flex">flex</option>
+                            <option value="block">block (desativa flex)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>flex-direction</label>
+                        <select data-prop="flex-direction" class="flex-control">
+                            <option value="row">row</option>
+                            <option value="row-reverse">row-reverse</option>
+                            <option value="column">column</option>
+                            <option value="column-reverse">column-reverse</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>flex-wrap</label>
+                        <select data-prop="flex-wrap" class="flex-control">
+                            <option value="nowrap">nowrap</option>
+                            <option value="wrap">wrap</option>
+                            <option value="wrap-reverse">wrap-reverse</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>justify-content</label>
+                        <select data-prop="justify-content" class="flex-control">
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="space-evenly">space-evenly</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>align-items</label>
+                        <select data-prop="align-items" class="flex-control">
+                            <option value="stretch">stretch</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="flex-end">flex-end</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>align-content (apenas com wrap)</label>
+                        <select data-prop="align-content" class="flex-control">
+                            <option value="normal">normal</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="center">center</option>
+                            <option value="space-between">space-between</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>gap (px)</label>
+                        <input type="number" data-prop="gap" value="10" class="flex-control">
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-small add-item" data-target="flex-preview">Adicionar Item</button>
+                        <button class="btn-small remove-item" data-target="flex-preview">Remover Item</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="preview-area">
+                    <div id="flex-preview" class="preview-container flex-container">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                        <div class="item">4</div>
+                    </div>
+                    <div class="code-block">
+                        <label class="code-label">HTML</label>
+                        <pre><code id="flex-html-code"></code></pre>
+                    </div>
+                    <div class="code-block">
+                        <label class="code-label">CSS</label>
+                        <pre><code id="flex-code"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Section -->
+        <section id="grid" class="card">
+            <div class="card-header">
+                <h2>2. CSS Grid (O Poder Multidimensional)</h2>
+                <p>Controle total sobre linhas e colunas simultaneamente.</p>
+            </div>
+
+            <div class="interactive-grid">
+                <div class="controls">
+                    <div class="control-group">
+                        <label>display</label>
+                        <select data-prop="display" class="grid-control">
+                            <option value="grid">grid</option>
+                            <option value="block">block (desativa grid)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>grid-template-columns</label>
+                        <select data-prop="grid-template-columns" class="grid-control">
+                            <option value="1fr 1fr 1fr">1fr 1fr 1fr</option>
+                            <option value="2fr 1fr">2fr 1fr</option>
+                            <option value="repeat(3, 1fr)">repeat(3, 1fr)</option>
+                            <option value="repeat(auto-fit, minmax(100px, 1fr))">auto-fit responsive</option>
+                            <option value="100px auto 100px">100px auto 100px</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>grid-template-rows</label>
+                        <select data-prop="grid-template-rows" class="grid-control">
+                            <option value="auto auto">auto auto</option>
+                            <option value="100px 200px">100px 200px</option>
+                            <option value="repeat(3, 150px)">repeat(3, 150px)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>justify-items (horizontal)</label>
+                        <select data-prop="justify-items" class="grid-control">
+                            <option value="stretch">stretch</option>
+                            <option value="start">start</option>
+                            <option value="center">center</option>
+                            <option value="end">end</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>align-items (vertical)</label>
+                        <select data-prop="align-items" class="grid-control">
+                            <option value="stretch">stretch</option>
+                            <option value="start">start</option>
+                            <option value="center">center</option>
+                            <option value="end">end</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>gap (px)</label>
+                        <input type="number" data-prop="gap" value="20" class="grid-control">
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-small add-item" data-target="grid-preview">Adicionar Item</button>
+                        <button class="btn-small remove-item" data-target="grid-preview">Remover Item</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="preview-area">
+                    <div id="grid-preview" class="preview-container grid-container">
+                        <div class="item">Header</div>
+                        <div class="item">Sidebar</div>
+                        <div class="item">Content</div>
+                        <div class="item">Footer</div>
+                    </div>
+                    <div class="code-block">
+                        <label class="code-label">HTML</label>
+                        <pre><code id="grid-html-code"></code></pre>
+                    </div>
+                    <div class="code-block">
+                        <label class="code-label">CSS</label>
+                        <pre><code id="grid-code"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theory Section -->
+        <section class="card theory">
+            <h3>Dicas de Estudo 💡</h3>
+            <div class="theory-grid">
+                <div class="theory-item">
+                    <h4>A Regra de Ouro ✨</h4>
+                    <p>Nenhuma propriedade de alinhamento funciona se você não definir primeiro: <code>display: flex</code> ou <code>display: grid</code>. Ele é o gatilho que ativa o comportamento do container.</p>
+                </div>
+                <div class="theory-item">
+                    <h4>Quando usar Flexbox?</h4>
+                    <ul>
+                        <li>Alinhamento simples (centralizar algo).</li>
+                        <li>Menu de navegação.</li>
+                        <li>Barra de ferramentas.</li>
+                        <li>Layouts lineares.</li>
+                    </ul>
+                </div>
+                <div class="theory-item">
+                    <h4>Quando usar Grid?</h4>
+                    <ul>
+                        <li>Layouts complexos de página inteira.</li>
+                        <li>Sistemas de Galeria.</li>
+                        <li>Dashboard com áreas variadas.</li>
+                        <li>Sobreposição de elementos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2024 - Aula 5 - Caixaverso. Desenvolvido para fins didáticos.</p>
+        <a href="projeto.html" class="btn">Ir para o Projeto Final &rarr;</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

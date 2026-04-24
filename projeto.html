@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Final: Landing Page do Produto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+        .requirements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .req-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .req-card h4 {
+            color: #10b981;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .status-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header class="project-header">
+        <div class="container">
+            <h1>Desafio Final: O Próximo Unicórnio 🦄</h1>
+            <p>Trabalho em Grupo - Construam uma Landing Page Profissional</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>O Briefing</h2>
+            <p>Vocês foram contratados para criar a presença digital de uma nova marca. Pode ser um produto inovador, uma empresa de tecnologia ou um destino turístico sustentável.</p>
+            
+            <div class="requirements">
+                <div class="req-card">
+                    <h4>ESTRUTURA <span class="status-badge">Obrigatório</span></h4>
+                    <ul>
+                        <li>Header com Navegação</li>
+                        <li>Seção Hero Impactante</li>
+                        <li>Grade de Funcionalidades (Grid Layout)</li>
+                        <li>Seção de Depoimentos (Flexbox)</li>
+                        <li>Rodapé com Links</li>
+                    </ul>
+                </div>
+
+                <div class="req-card">
+                    <h4>TECNOLOGIAS <span class="status-badge">Obrigatório</span></h4>
+                    <ul>
+                        <li>HTML5 Semântico</li>
+                        <li>Uso de Flexbox para componentes</li>
+                        <li>Uso de Grid para o layout geral</li>
+                        <li>Cores e Fontes Personalizadas</li>
+                    </ul>
+                </div>
+
+                <div class="req-card">
+                    <h4>O QUE É "SEÇÃO HERO"? 🤔</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">É a primeira parte que vemos em um site. Serve para prender a atenção do usuário logo de cara!</p>
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                        <div style="width: 60%; height: 8px; background: #3b82f6; margin: 0 auto 8px; border-radius: 4px;"></div>
+                        <div style="width: 80%; height: 4px; background: rgba(255,255,255,0.2); margin: 0 auto 12px; border-radius: 2px;"></div>
+                        <div style="width: 40px; height: 15px; background: #10b981; margin: 0 auto; border-radius: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Sugestão de Layout (Wireframe)</h2>
+            <div style="background: #1e293b; padding: 2rem; border-radius: 12px; border: 2px dashed #334155; text-align: center;">
+                <p>Use este espaço para começar o código do seu grupo.</p>
+                <div style="display: grid; grid-template-areas: 'h h h' 'm m s' 'f f f'; gap: 10px; height: 200px; margin-top: 1rem;">
+                    <div style="grid-area: h; background: #3b82f6; opacity: 0.5; display: flex; align-items: center; justify-content: center;">Header</div>
+                    <div style="grid-area: m; background: #10b981; opacity: 0.5; display: flex; align-items: center; justify-content: center;">Main Content</div>
+                    <div style="grid-area: s; background: #f59e0b; opacity: 0.5; display: flex; align-items: center; justify-content: center;">Sidebar</div>
+                    <div style="grid-area: f; background: #6366f1; opacity: 0.5; display: flex; align-items: center; justify-content: center;">Footer</div>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; margin: 4rem 0;">
+            <h3>Dúvidas sobre o projeto?</h3>
+            <p>Consultem a documentação interativa na <a href="index.html" style="color: var(--primary);">página inicial</a>.</p>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2024 - Projeto Integrador - Caixaverso</p>
+    </footer>
+</body>
+</html>
