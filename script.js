@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.classList.toggle('active');
             };
         });
+        
 
         document.querySelectorAll('.add-item').forEach(btn => {
             btn.onclick = () => {
